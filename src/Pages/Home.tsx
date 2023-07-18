@@ -42,7 +42,7 @@ export const Home = () => {
 		<><Image position={'absolute'} top={'2%'} left={'50%'} src={circle} w={'20px'} h={'20px'} /><Flex
 			w={'100%'}
 			minH={'100vh'}
-			px={['20px', null, '40px', '130px']}
+			px={['20px', null, '40px', null, '130px']}
 			bgColor={'#F0EEE2'}
 			{...(!isLargerThan800 && {
 				bgImage: `linear-gradient(180deg, rgba(240, 238, 226, 0.80) 0%, #F0EEE2 100%) , url('${sliderImage3}')`,
@@ -55,13 +55,13 @@ export const Home = () => {
 
 			<Navigation pageName='About us' path={AppRoutes.about} />
 			<Flex direction={['column', null, null, 'row']} pt={['50px', '80px']} justifyContent={'space-between'}>
-				<Stack mt={['', '30px']} spacing={['25px', '30px']} justify={'flex-start'}>
-					<Heading display={['none', 'flex']} w={['335px', '653px']} h={['144px', '177px']} color={'darkGreen'} fontWeight={'bold'} fontSize={['32px', '50px']}>
+				<Stack mt={['', null, null, null, '30px']} spacing={['25px', '30px']} justify={'flex-start'}>
+					{ isLargerThan800 && <Heading display={['none', 'flex']} w={ 'auto'} mb={[null,'50px', null, null, 0]} h={['144px', '177px']} color={'darkGreen'} fontWeight={'bold'} fontSize={['32px', '50px']}>
 						Keep all your school needs managed and organized in just one application
-					</Heading>
-					<Heading display={['flex', 'none']} w={['335px', '653px']} h={['144px', '177px']} color={'darkGreen'} fontWeight={'bold'} fontSize={['35px', '50px']}>
+					</Heading>}
+					{!isLargerThan800 && <Heading w={'335px'} h={'144px'} color={'darkGreen'} fontWeight={'bold'} fontSize={'35px'}>
 						Keep all your school  needs organized in just one application
-					</Heading>
+					</Heading>}
 					<Text w={['335px', '557px']} color={'brown.200'} fontWeight={'medium'} fontSize={['14px', '18px']}>
 						Be the first to know when we launch. Join the waitlist to access the
 						best management app for all of your day to day school needs.

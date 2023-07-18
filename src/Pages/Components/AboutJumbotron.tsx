@@ -12,8 +12,8 @@ export const AboutJumbotron = () => {
 			</Stack>
 			<Flex direction={['column', 'column']} justify={'center'} alignItems={'flex-start'}  m={'-130px'} w={'auto'}   h={'770px'} objectFit={'cover'}  bgImage={`url(${backgroundWithGlow})`}>
 				<SlidingItemsContainer />
-				<Flex direction={['column', null,null, null, 'row']} ml={['130px',null, null,0]}  position={'relative'} top={['-10%','-35%']} justify={'space-evenly'} alignItems={'flex-start'} w={'100%'}>
-					<Stack mb={['35px',null, null,  null, 0]} spacing={'18px'} w={['335px','450px']} >
+				<Flex direction={['column', null,null, null, 'row']} ml={['130px',null, null, null,0]}  position={'relative'} top={['-10%','-35%']} justify={'space-evenly'} alignItems={'flex-start'} w={'100%'}>
+					<Stack mb={['35px',null, null,  null, 0]} spacing={'18px'} w={['335px','500px', null, '500px','450px']} >
 						<HStack>
 							<Divider border={'2px solid #FFE931 '} color={'#FFE931'} h={['36px','53px']} orientation='vertical'/>
 							<Text color={'#FFF'} fontSize={'28px'} fontWeight={500}>Our vision</Text>

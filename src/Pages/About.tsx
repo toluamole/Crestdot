@@ -20,14 +20,14 @@ export const About = () => {
 			direction={'column'}
 			overflowX={'hidden'}
 		>
-			<Navigation pageName='Home' path={AppRoutes.home}/>
+			<Navigation pageName='Home' path={AppRoutes.home}/> 
 			<AboutJumbotron/>
-			<SimpleGrid mt={['145px', '-10px']} columns={[1, null, null,2]} spacingY={['30px','60px']} spacingX={'80px'} >
+			<SimpleGrid mt={['145px', '-10px']} columns={[1, null,null, null,2]} spacingY={['30px','60px']} spacingX={'80px'} >
 				<Stack 
 					ml={[0,-6]} 
 					border={'1px solid #F0EEE2 '} 
-					width={['335px',null, 'auto','570px']} 
-					h={['auto', null, null,'500px']} p={[0,6]}  
+					width={['335px',null, 'auto', null,'570px']} 
+					h={['auto', null, null,null,'500px']} p={[0,6]}  
 					bgColor={'#F0EEE2'}
 					// mb={'-80px'}
 				>
@@ -42,7 +42,7 @@ export const About = () => {
 						{'This is important to us, and it is the reason we are committed to delivering a product that ensures that the process of delivering quality education and administrative management is trusted.'}
 					</Text>
 				</Stack>
-				<Stack spacing={'10px'} mt={[null, null, null,'210px']} w={['335px',null, 'auto','530px']} h={['auto', null, null,'192px']}>
+				<Stack spacing={'10px'} mt={[null, null,null, null,'210px']} w={['335px',null, 'auto', null,'530px']} h={['auto', null, null, null,'192px']}>
 					<Collaboration p={2} bgColor={'#1249440D'} boxSize={'50px'} />
 					<Text fontSize={['16px','20px']} fontWeight={500} color={'brown.100'}>Collaboration</Text>
 					<Text color={'brown.100'} fontSize={['14px','18px']}>
@@ -50,7 +50,7 @@ export const About = () => {
 						{'This is important to us, and it is the reason we are committed to delivering a product that ensures that the process of delivering quality education and administrative management is trusted.'}
 					</Text>
 				</Stack>
-				<Stack spacing={'10px'} w={['335px',null, 'auto','530px']} h={['auto','250px']} >
+				<Stack spacing={'10px'} w={['335px',null, 'auto', null,'530px']} h={['auto','250px']} >
 					<Energy p={2}  bgColor={'#1249440D'} boxSize={'50px'} />
 					<Text fontSize={['16px','20px']} fontWeight={500} color={'brown.100'}>Efficiency</Text>
 					<Text color={'brown.100'} fontSize={['14px','18px']}>
@@ -58,7 +58,7 @@ export const About = () => {
 						{'This is important to us, and it is the reason we are committed to delivering a product that ensures that the process of delivering quality education and administrative management is trusted.'}
 					</Text>
 				</Stack>
-				<Stack spacing={'10px'}  w={['335px', null, 'auto','530px']} h={['auto','250px']}>
+				<Stack spacing={'10px'}  w={['335px', null, 'auto', null,'530px']} h={['auto','250px']}>
 					<Innovation p={2} bgColor={'#1249440D'} boxSize={'50px'} />
 					<Text fontSize={['16px','20px']} fontWeight={500} color={'brown.100'}>Innovation</Text>
 					<Text color={'brown.100'} fontSize={['14px','18px']}>
@@ -66,7 +66,7 @@ export const About = () => {
 						{'This is important to us, and it is the reason we are committed to delivering a product that ensures that the process of delivering quality education and administrative management is trusted.'}
 					</Text>
 				</Stack>
-				<Stack spacing={'10px'}  w={['335px', null, 'auto','530px']} h={['auto','250px']} >
+				<Stack spacing={'10px'}  w={['335px', null, 'auto',null,'530px']} h={['auto','250px']} >
 					<Workflow p={2} bgColor={'#1249440D'} boxSize={'50px'} />
 					<Text fontSize={['16px','20px']} fontWeight={500} color={'brown.100'}>Seamless Workflow</Text>
 					<Text color={'brown.100'} fontSize={['14px','18px']}>
