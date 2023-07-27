@@ -5,12 +5,22 @@ import { useNavigate } from 'react-router-dom';
 import { AppRoutes } from '../../Routes/AppRoutes';
 
 interface INavigationProps{
-	pageName:string;
-	path: string
+	path?: string
+	onOpen: () => void;
+	pathName?: string;
 }
 
-export const Navigation = ({pageName, path}:INavigationProps) => {
+export const Navigation = ({onOpen, pathName, path}:INavigationProps) => {
 	const navigate = useNavigate();
+
+	const _handleClick = (path?:string) => {
+		if(path){
+			navigate(path);
+		}else{
+			onOpen();
+		}
+		
+	};
 	return(
 		<Flex mt={'40px'} w={'full'} alignItems={'center'} justifyContent={'space-between'}>
 			<Image cursor={'pointer'} onClick={() => navigate(AppRoutes.home)} w={['112px','165px']} h={['24px','35px']} src={Cresdot}></Image>
@@ -19,9 +29,9 @@ export const Navigation = ({pageName, path}:INavigationProps) => {
 					variant={'primary'}
 					w={['91px','119px']} 
 					h={['40px','50px']} 
-					onClick={() => navigate(path)}
+					onClick={() => _handleClick(path)}
 				>
-					{pageName}
+					{pathName || 'Join waitlist'}
 				</Button>
 			</Flex>
 		</Flex>

@@ -1,7 +1,8 @@
-import { Heading, Stack, Text, Flex, Divider, HStack} from '@chakra-ui/react';
+import { Heading, Stack, Text, Flex, Divider, HStack, Image} from '@chakra-ui/react';
 import React from 'react';
 import { SlidingItemsContainer } from './SlidingItemsContainer';
 import backgroundWithGlow from '../../Assets/Images/backgroundWithGlow.svg';
+import AboutImage from '../../Assets/Images/AboutImage.png';
 
 export const AboutJumbotron = () => {
 	return(
@@ -11,7 +12,8 @@ export const AboutJumbotron = () => {
 				<Heading w={['335px', null, 'auto','937px']} fontSize={['32px','70px']} fontWeight={'bold'} color={'darkGreen'}>Organizing the Education Parts,One At a Time</Heading>
 			</Stack>
 			<Flex direction={['column', 'column']} justify={'center'} alignItems={'flex-start'}  m={'-130px'} w={'auto'}   h={'770px'} objectFit={'cover'}  bgImage={`url(${backgroundWithGlow})`}>
-				<SlidingItemsContainer />
+				{/* <SlidingItemsContainer /> */}
+				<Image src={AboutImage }  position={'relative'}  top={['-15%', null, '-39%','-30%']} />
 				<Flex direction={['column', null,null, null, 'row']} ml={['130px',null, null, null,0]}  position={'relative'} top={['-10%','-35%']} justify={'space-evenly'} alignItems={'flex-start'} w={'100%'}>
 					<Stack mb={['35px',null, null,  null, 0]} spacing={'18px'} w={['335px','500px', null, '500px','450px']} >
 						<HStack>
