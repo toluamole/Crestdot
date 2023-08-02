@@ -38,7 +38,7 @@ export const socialIcons = [
 ];
 
 export const Home = () => {
-	const [isLargerThan800] = useMediaQuery('(min-width: 800px)');
+	const [isLargerThan736] = useMediaQuery('(min-width: 736px)');
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return(
 		<>
@@ -48,7 +48,7 @@ export const Home = () => {
 				minH={'100vh'}
 				px={['20px', null, '40px', null, '130px']}
 				bgColor={'#F0EEE2'}
-				{...(!isLargerThan800 && {
+				{...(!isLargerThan736 && {
 					bgImage: `linear-gradient(180deg, rgba(240, 238, 226, 0.80) 0%, #F0EEE2 100%) , url('${sliderImage3}')`,
 				})}
 				bgRepeat={'no-repeat'}
@@ -60,13 +60,13 @@ export const Home = () => {
 				<Navigation pathName='About Us' onOpen={onOpen} path={AppRoutes.about} />
 				<Flex direction={['column', null, null, 'row']} pt={['50px', '80px']} justifyContent={'space-between'}>
 					<Stack mt={['', null, null, null, '30px']} spacing={['25px', '30px', '30px']} justify={'flex-start'}>
-						{ isLargerThan800 && <Heading display={['none', 'flex']} w={ 'auto'} mb={[null,'50px', null, '50px', null]} h={['144px', '177px']} color={'darkGreen'} fontWeight={'bold'} fontSize={['32px', '50px']}>
+						{ isLargerThan736 && <Heading display={['none', 'flex']} w={ 'full'} h={['144px', '177px']} color={'darkGreen'} fontWeight={'bold'} fontSize={ '50px'}>
 							Keep all your school needs managed and organized in just one application
 						</Heading>}
-						{!isLargerThan800 && <Heading w={'335px'} h={'144px'} color={'darkGreen'} fontWeight={'bold'} fontSize={'35px'}>
+						{!isLargerThan736 && <Heading w={'auto'} h={'144px'} color={'darkGreen'} fontWeight={'bold'} fontSize={'35px'}>
 							Keep all your school  needs organized in just one application
 						</Heading>}
-						<Text w={['335px', '557px']} color={'brown.200'} fontWeight={'medium'} fontSize={['14px', '18px']}>
+						<Text w={['335px', 'auto']} color={'brown.200'} mt={['', '25px']} fontWeight={'medium'} fontSize={['14px', '18px']}>
 							Be the first to know when we launch. Join the waitlist to access the
 							best management app for all of your day to day school needs.
 						</Text>

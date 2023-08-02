@@ -27,8 +27,9 @@ export const Navigation = ({onOpen, pathName, path}:INavigationProps) => {
 			<Flex alignItems={'center'} justifyContent={'center'} border={'0.5px solid rgba(120, 82, 38, 0.50)'} borderRadius={'50px'} w={['99px','129px']} h={['48px','60px']}>
 				<Button 
 					variant={'primary'}
-					w={['91px','119px']} 
-					h={['40px','50px']} 
+					w={['95px','119px']} 
+					h={['40px','50px']}
+					fontSize={'14px'}
 					onClick={() => _handleClick(path)}
 				>
 					{pathName || 'Join waitlist'}

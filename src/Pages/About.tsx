@@ -129,7 +129,7 @@ export const About = () => {
 					as={RLink} target='_blank' to={'https://calendar.google.com/calendar/embed?src=crestdot%40gmail.com&ctz=Africa%2FLagos '}
 					cursor={'pointer'} 
 				>
-					<Image src={chatButton} />
+					<Image src={chatButton} w={['35px', '70px']} h={['40px','60px']} />
 				</Box>
 			</Stack>
 			<CustomModal onClose={onClose} isOpen={isOpen} />
