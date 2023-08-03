@@ -38,7 +38,7 @@ export const CustomModal = ({isOpen, onClose}:ICustomModal) => {
 							placeholder='Enter your email address'
 							mb={'30px'} />
 						<FormLabel color={'#000'}>User Category</FormLabel>
-						<Select name='category' mb={'30px'} bgColor={'#F6F6F6'} color={'#8B8B8B'} _placeholder={{ color: '#C4C4C4' }} placeholder='Select country'>
+						<Select name='category' mb={'30px'} bgColor={'#F6F6F6'} color={'#8B8B8B'} _placeholder={{ color: '#C4C4C4' }} placeholder='Select category'>
 							<chakra.option bgColor={'#F6F6F6'} >Teacher</chakra.option>
 							<chakra.option bgColor={'#F6F6F6'}>Student</chakra.option>
 						</Select>
