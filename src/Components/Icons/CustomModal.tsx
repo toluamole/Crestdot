@@ -13,7 +13,7 @@ export const CustomModal = ({isOpen, onClose}:ICustomModal) => {
 			<ModalOverlay />
 			<ModalContent right={['0', null, null, '150px']} h={'550px'} borderLeftRadius={'10px'}  bgColor={'#fff'} >
 				{/* <ModalCloseButton /> */}
-				<ModalBody  w={'auto'}  display={'flex'} justifyContent={['center', null, null, 'flex-start']}  borderRadius={'none'} >
+				<ModalBody pl={[null, '50px']}  w={'auto'}  display={'flex'} justifyContent={['center', null, null, 'flex-start']}  borderRadius={'none'} >
 					
 					<chakra.form className="launchlist-form" action="https://getlaunchlist.com/s/t2L2mc" method="POST">
 						<Heading my={'40px'} fontSize={'28px'} color={'#000'}>Join the Cresdot Waitlist</Heading>
