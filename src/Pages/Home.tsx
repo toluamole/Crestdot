@@ -12,7 +12,6 @@ import { AppRoutes } from '../Routes/AppRoutes';
 import sliderImage3 from '../Assets/Images/sliderImage3.png';
 import Hero from '../Assets/Images/Hero.png';
 import { CustomModal } from '../Components/Icons/CustomModal';
-import Noise from '../Assets/svg/Noise.svg';
 
 export const socialIcons = [
 	{
@@ -41,7 +40,7 @@ export const Home = () => {
 	const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
-		<Box bgImage={`url('${Noise}')`} backgroundSize={'cover'} w={'100vw'} h={'100vh'}>
+		<>
 			<Image position={'absolute'} top={'2%'} left={'50%'} src={circle} w={'20px'} h={'20px'} />
 			<Flex
 				w={'100%'}
@@ -122,6 +121,6 @@ export const Home = () => {
 				</Flex>
 			</Flex>
 			<CustomModal isOpen={isOpen} onClose={onClose} />
-		</Box>
+		</>
 	);
 };
