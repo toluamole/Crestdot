@@ -7,68 +7,87 @@ import twitter from '../Assets/svg/twitter.svg';
 import linkedin from '../Assets/svg/linkedin.svg';
 import rightArrow from '../Assets/svg/rightArrow.svg';
 import circle from '../Assets/svg/cricle.svg';
-import pie from '../Assets/svg/pie.svg';
 import { Link as RLink } from 'react-router-dom';
 import { AppRoutes } from '../Routes/AppRoutes';
 import sliderImage3 from '../Assets/Images/sliderImage3.png';
 import Hero from '../Assets/Images/Hero.png';
 import { CustomModal } from '../Components/Icons/CustomModal';
+import Noise from '../Assets/svg/Noise.svg';
 
 export const socialIcons = [
 	{
 		id: 0,
 		src: facebookIcon,
-		path: 'https://www.facebook.com/crestdotApp '
+		path: 'https://www.facebook.com/crestdotApp ',
 	},
 	{
 		id: 1,
 		src: instagramIcon,
-		path: 'https://www.instagram.com/crestdotApp '
+		path: 'https://www.instagram.com/crestdotApp ',
 	},
 	{
 		id: 2,
 		src: linkedin,
-		path: 'https://www.linkedin.com/in/crestdot'
+		path: 'https://www.linkedin.com/in/crestdot',
 	},
 	{
 		id: 3,
 		src: twitter,
-		path: 'https://www.twitter.com/crestdot'
-	}
+		path: 'https://www.twitter.com/crestdot',
+	},
 ];
 
 export const Home = () => {
-	const [isLargerThan736] = useMediaQuery('(min-width: 736px)');
+	const [isLargerThan900] = useMediaQuery('(min-width: 900px)');
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	return(
-		<>
+	return (
+		<Box bgImage={`url('${Noise}')`} backgroundSize={'cover'} w={'100vw'} h={'100vh'}>
 			<Image position={'absolute'} top={'2%'} left={'50%'} src={circle} w={'20px'} h={'20px'} />
 			<Flex
 				w={'100%'}
 				minH={'100vh'}
-				px={['20px', null, '40px', null, '130px']}
+				px={['17px', null, '40px', null, '110px']}
 				bgColor={'#F0EEE2'}
-				{...(!isLargerThan736 && {
+				{...(!isLargerThan900 && {
 					bgImage: `linear-gradient(180deg, rgba(240, 238, 226, 0.80) 0%, #F0EEE2 100%) , url('${sliderImage3}')`,
 				})}
+				bgSize={'cover'}
 				bgRepeat={'no-repeat'}
 				direction={'column'}
 				justifyContent={'space-between'}
-				maxW={'1440px'} m={'0 auto'}
+				maxW={'1440px'}
+				m={'0 auto'}
 			>
-
 				<Navigation pathName='About Us' onOpen={onOpen} path={AppRoutes.about} />
-				<Flex direction={['column', null, null, 'row']} pt={['50px', '80px']} justifyContent={'space-between'}>
+				<Flex direction={['column', null, null, 'row']} pt={['50px', '40px']} justifyContent={'space-between'}>
 					<Stack mt={['', null, null, null, '30px']} spacing={['25px', '30px', '30px']} justify={'flex-start'}>
-						{ isLargerThan736 && <Heading display={['none', 'flex']} w={ 'full'} h={['144px', '177px']} color={'darkGreen'} fontWeight={'bold'} fontSize={ '50px'}>
-							Keep all your school needs managed and organized in just one application
-						</Heading>}
-						{!isLargerThan736 && <Heading w={'auto'} h={'144px'} color={'darkGreen'} fontWeight={'bold'} fontSize={'35px'}>
-							Keep all your school  needs organized in just one application
-						</Heading>}
-						<Text w={['335px', 'auto']} color={'brown.200'} mt={['', '25px']} fontWeight={'medium'} fontSize={['14px', '18px']}>
-							Be the first to know when we launch. Join the waitlist to access the
-							best management app for all of your day to day school needs.
+						{isLargerThan900 && (
+							<Heading
+								display={['none', 'flex']}
+								w={'auto'}
+								h={['144px', '177px']}
+								color={'darkGreen'}
+								fontWeight={'extrabold'}
+								fontSize={['50px','50px']}
+							>
+								Keep all your school
+								<br /> needs organized in <br /> just one application
+							</Heading>
+						)}
+						{!isLargerThan900 && (
+							<Heading w={['auto','auto']} h={'144px'} color={'darkGreen'} fontWeight={'bold'} fontSize={['35px','50px']}>
+								Keep all your school needs organized in just one application
+							</Heading>
+						)}
+						<Text
+							w={['335px','494px']}
+							color={'brown.200'}
+							mt={['', null, '30px', '30px']}
+							fontWeight={'medium'}
+							fontSize={['14px', '18px']}
+						>
+							Be the first to know when we launch. Join the waitlist to access the best management app for all of your
+							day to day school needs.
 						</Text>
 
 						<Button
@@ -82,9 +101,8 @@ export const Home = () => {
 							Join waitlist
 						</Button>
 					</Stack>
-					<Image objectFit={'contain'} display={['none', null, null, 'flex']} w={'487px'} h={'500px'} src={Hero} />
+					<Image objectFit={'contain'} display={['none', null, null, 'flex']} w={['auto','500px']} h={'500px'} src={Hero} />
 				</Flex>
-				<Image position={'absolute'} left={0} bottom={'4%'} src={pie} />
 				<Flex mb={'40px'} justifyContent={'center'} alignItems={'center'}>
 					{socialIcons.map((icon) => {
 						return (
@@ -103,7 +121,7 @@ export const Home = () => {
 					})}
 				</Flex>
 			</Flex>
-			<CustomModal isOpen={isOpen}  onClose={onClose} / >
-		</>
+			<CustomModal isOpen={isOpen} onClose={onClose} />
+		</Box>
 	);
 };
