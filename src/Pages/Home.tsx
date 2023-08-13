@@ -12,6 +12,8 @@ import { AppRoutes } from '../Routes/AppRoutes';
 import sliderImage3 from '../Assets/Images/sliderImage3.png';
 import Hero from '../Assets/Images/Hero.png';
 import { CustomModal } from '../Components/Icons/CustomModal';
+import firstHeroImage from '../Assets/Images/FirstHeroImage.png';
+import secondHeroImage from '../Assets/Images/secondHeroImage.png';
 
 export const socialIcons = [
 	{
@@ -100,7 +102,10 @@ export const Home = () => {
 							Join waitlist
 						</Button>
 					</Stack>
-					<Image objectFit={'contain'} display={['none', null, null, 'flex']} w={['auto','500px']} h={'500px'} src={Hero} />
+					<Flex>
+						<Image objectFit={'contain'} display={['none', null, null, 'flex']} w={['auto','300px']} h={'500px'} src={firstHeroImage} cursor={'pointer'} transition={'all .2s ease'} _hover={{transform: 'translateY(-10px)'}} />
+						<Image objectFit={'contain'} display={['none', null, null, 'flex']} w={['auto','300px']} h={'500px'} src={secondHeroImage} pos={'relative'} cursor={'pointer'} bottom={'7%'} transition={'all .2s ease'} _hover={{transform: 'translateY(-10px)'}}/>
+					</Flex>
 				</Flex>
 				<Flex mb={'40px'} justifyContent={'center'} alignItems={'center'}>
 					{socialIcons.map((icon) => {

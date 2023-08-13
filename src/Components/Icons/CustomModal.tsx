@@ -1,7 +1,10 @@
 import React from 'react';
-import { Modal, ModalOverlay, ModalContent, ModalBody, chakra, Heading, FormLabel, Input, Select, Flex, Button, Image } from '@chakra-ui/react';
+import { Modal, ModalOverlay, ModalContent, ModalBody, chakra, Heading, FormLabel, Input, Select, Flex, Button, Image, InputGroup, InputLeftElement, Icon } from '@chakra-ui/react';
 import rightArrow from '../../Assets/svg/rightArrow.svg';
 import modalImage from '../../Assets/Images/modalImage.png';
+import {AiOutlineUser} from 'react-icons/ai';
+import {AiOutlineMail} from 'react-icons/ai';
+
 
 interface ICustomModal {
     isOpen: boolean;
@@ -18,27 +21,37 @@ export const CustomModal = ({isOpen, onClose}:ICustomModal) => {
 					<chakra.form className="launchlist-form" action="https://getlaunchlist.com/s/t2L2mc" method="POST">
 						<Heading my={'40px'} fontSize={'28px'} color={'#000'}>Join the Cresdot Waitlist</Heading>
 						<FormLabel color={'#000'}>Full Name</FormLabel>
-						<Input
-							name='name'
-							type='text'
-							w={['335px', 'full', 'full', '330px']}
-							color={'#8B8B8B'}
-							_placeholder={{ color: '#C4C4C4' }}
-							placeholder='Full name'
-							bgColor={'#F6F6F6'}
-							mb={'30px'} />
+						<InputGroup>
+							<InputLeftElement pointerEvents='none'>
+								<Icon as={AiOutlineUser} color={'#8B8B8B'} />
+							</InputLeftElement>
+							<Input
+								name='name'
+								type='text'
+								w={['335px', 'full', 'full', '330px']}
+								color={'#8B8B8B'}
+								_placeholder={{ color: '#C4C4C4' }}
+								placeholder='Full name'
+								bgColor={'#F6F6F6'}
+								mb={'30px'} />
+						</InputGroup>
 						<FormLabel color={'#000'}>Email address</FormLabel>
-						<Input
-							name='email'
-							type='email'
-							w={['335px', '330px']}
-							color={'#8B8B8B'}
-							bgColor={'#F6F6F6'}
-							_placeholder={{ color: '#C4C4C4' }}
-							placeholder='Enter your email address'
-							mb={'30px'} />
+						<InputGroup>
+							<InputLeftElement pointerEvents='none'>
+								<Icon as={AiOutlineMail} color={'#8B8B8B'} />
+							</InputLeftElement>
+							<Input
+								name='name'
+								type='text'
+								w={['335px', 'full', 'full', '330px']}
+								color={'#8B8B8B'}
+								_placeholder={{ color: '#C4C4C4' }}
+								placeholder='Full name'
+								bgColor={'#F6F6F6'}
+								mb={'30px'} />
+						</InputGroup>
 						<FormLabel color={'#000'}>User Category</FormLabel>
-						<Select name='category' mb={'30px'} bgColor={'#F6F6F6'} color={'#8B8B8B'} _placeholder={{ color: '#C4C4C4' }} placeholder='Select category'>
+						<Select name='category' mb={'30px'}  bgColor={'#F6F6F6'} color={'#8B8B8B'} _placeholder={{ color: '#C4C4C4' }} placeholder='Select category'>
 							<chakra.option bgColor={'#F6F6F6'} >Teacher</chakra.option>
 							<chakra.option bgColor={'#F6F6F6'}>Student</chakra.option>
 						</Select>
@@ -60,7 +73,7 @@ export const CustomModal = ({isOpen, onClose}:ICustomModal) => {
 						</Flex>
 					</chakra.form>
 					
-					<Image display={['none', null, null,'flex']} pos={'relative'} bottom={'1.5%'} left={'23.5%'} src={modalImage} w={['550px']} h={'550px'} objectFit={'cover'} />
+					<Image display={['none', null, null,'flex']} pos={'relative'} bottom={'1.4%'} left={'23.5%'} src={modalImage} w={['550px']} h={'550px'} objectFit={'cover'} borderRightRadius={'10px'} />
 				</ModalBody>
 			</ModalContent>
 		</Modal>
