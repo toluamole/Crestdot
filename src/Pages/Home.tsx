@@ -10,7 +10,6 @@ import circle from '../Assets/svg/cricle.svg';
 import { Link as RLink } from 'react-router-dom';
 import { AppRoutes } from '../Routes/AppRoutes';
 import sliderImage3 from '../Assets/Images/sliderImage3.png';
-import Hero from '../Assets/Images/Hero.png';
 import { CustomModal } from '../Components/Icons/CustomModal';
 import firstHeroImage from '../Assets/Images/FirstHeroImage.png';
 import secondHeroImage from '../Assets/Images/secondHeroImage.png';
