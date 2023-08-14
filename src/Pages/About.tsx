@@ -1,4 +1,4 @@
-import { Box, Button, Divider, HStack, Heading, SimpleGrid, Stack, Text, Image, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Divider, HStack, Heading, SimpleGrid, Stack, Text, Image, useDisclosure, Icon } from '@chakra-ui/react';
 import React from 'react';
 import { Navigation } from './Components/Navigation';
 import { Collaboration, Energy, Innovation, TrustIcon, Workflow } from '../Components/Icons/Trust';
@@ -110,12 +110,19 @@ export const About = () => {
 									key={icon.id}
 									// mr={'30px'} 
 									border={'1px solid darkGreen'}
+									w={'30px'} h={'30px'}
 									borderRadius={'50px'}
 									as={RLink}
 									to={icon.path}
 									cursor={'pointer'}
+									color={'#124944'}
+									_hover={{
+										bg: '#FFE931',
+										border: '1px solid #FFE931 '
+									}}
+									transition={'all ease .2s'}
 								>
-									<Image w={'30px'} h={'30px'} p={'9px'} src={icon.src} />
+									<Icon boxSize={'30px'} p={2} as={icon.src} />
 								</Box>
 							);
 						})};

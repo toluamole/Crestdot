@@ -1,10 +1,6 @@
-import { Box, Button, Flex, Stack, Text, Image, useDisclosure, Heading, useMediaQuery } from '@chakra-ui/react';
+import { Box, Button, Flex, Stack, Text, Image, useDisclosure, Heading, useMediaQuery, Icon} from '@chakra-ui/react';
 import React from 'react';
 import { Navigation } from './Components/Navigation';
-import facebookIcon from '../Assets/svg/facebookIcon.svg';
-import instagramIcon from '../Assets/svg/instagramIcon.svg';
-import twitter from '../Assets/svg/twitter.svg';
-import linkedin from '../Assets/svg/linkedin.svg';
 import rightArrow from '../Assets/svg/rightArrow.svg';
 import circle from '../Assets/svg/cricle.svg';
 import { Link as RLink } from 'react-router-dom';
@@ -13,26 +9,31 @@ import sliderImage3 from '../Assets/Images/sliderImage3.png';
 import { CustomModal } from '../Components/Icons/CustomModal';
 import firstHeroImage from '../Assets/Images/FirstHeroImage.png';
 import secondHeroImage from '../Assets/Images/secondHeroImage.png';
+import {BiLogoFacebook} from 'react-icons/bi';
+import {AiOutlineInstagram} from 'react-icons/ai';
+import {GrLinkedinOption} from 'react-icons/gr';
+import {AiOutlineTwitter} from 'react-icons/ai';
+
 
 export const socialIcons = [
 	{
 		id: 0,
-		src: facebookIcon,
+		src: BiLogoFacebook,
 		path: 'https://www.facebook.com/crestdotApp ',
 	},
 	{
 		id: 1,
-		src: instagramIcon,
+		src: AiOutlineInstagram,
 		path: 'https://www.instagram.com/crestdotApp ',
 	},
 	{
 		id: 2,
-		src: linkedin,
+		src: GrLinkedinOption,
 		path: 'https://www.linkedin.com/in/crestdot',
 	},
 	{
 		id: 3,
-		src: twitter,
+		src: AiOutlineTwitter,
 		path: 'https://www.twitter.com/crestdot',
 	},
 ];
@@ -89,17 +90,18 @@ export const Home = () => {
 							Be the first to know when we launch. Join the waitlist to access the best management app for all of your
 							day to day school needs.
 						</Text>
-
-						<Button
-							type='submit'
-							variant={'primary'}
-							w={'151px'}
-							h={'50px'}
-							onClick={onOpen}
-							rightIcon={<Image src={rightArrow} />}
-						>
-							Join waitlist
-						</Button>
+						<Flex alignItems={'center'} justifyContent={'center'} border={'0.5px solid rgba(120, 82, 38, 0.50)'} borderRadius={'50px'} w={['99px','160px']} h={['48px','60px']}>
+							<Button
+								type='submit'
+								variant={'primary'}
+								w={'151px'}
+								h={'50px'}
+								onClick={onOpen}
+								rightIcon={<Image src={rightArrow} />}
+							>
+								Join waitlist
+							</Button>
+						</Flex>
 					</Stack>
 					<Flex>
 						<Image objectFit={'contain'} display={['none', null, null, 'flex']} w={['auto','300px']} h={'500px'} src={firstHeroImage} cursor={'pointer'} transition={'all .2s ease'} _hover={{transform: 'translateY(-10px)'}} />
@@ -113,12 +115,19 @@ export const Home = () => {
 								key={icon.id}
 								mr={'30px'}
 								border={'1px solid darkGreen'}
-								borderRadius={'50px'}
+								w={'30px'} h={'30px'}
+								borderRadius={'50%'}
 								as={RLink}
 								to={icon.path}
 								cursor={'pointer'}
+								color={'#124944'}
+								_hover={{
+									bg: '#FFE931',
+									border: '1px solid #FFE931 '
+								}}
+								transition={'all ease .2s'}
 							>
-								<Image w={'30px'} h={'30px'} p={'9px'} src={icon.src} />
+								<Icon  boxSize={'30px'}   p={2}  as={icon.src} />
 							</Box>
 						);
 					})}

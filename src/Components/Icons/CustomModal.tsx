@@ -12,9 +12,9 @@ interface ICustomModal {
 }
 export const CustomModal = ({isOpen, onClose}:ICustomModal) => {
 	return(
-		<Modal isOpen={isOpen} onClose={onClose} size={['lg',null, 'xl','3xl']} isCentered >
+		<Modal isOpen={isOpen} onClose={onClose} size={['lg',null, 'xl','lg']} isCentered >
 			<ModalOverlay />
-			<ModalContent right={['0', null, null, '150px']} h={'550px'} borderLeftRadius={'10px'}  bgColor={'#fff'} >
+			<ModalContent right={['0', null, null, '150px']} h={'510px'} borderLeftRadius={'10px'}  bgColor={'#fff'} >
 				{/* <ModalCloseButton /> */}
 				<ModalBody pl={[null, '50px']}  w={'auto'}  display={'flex'} justifyContent={['center', null, null, 'flex-start']}  borderRadius={'none'} >
 					
@@ -73,7 +73,7 @@ export const CustomModal = ({isOpen, onClose}:ICustomModal) => {
 						</Flex>
 					</chakra.form>
 					
-					<Image display={['none', null, null,'flex']} pos={'relative'} bottom={'1.4%'} left={'23.5%'} src={modalImage} w={['550px']} h={'550px'} objectFit={'cover'} borderRightRadius={'10px'} />
+					<Image display={['none', null, null,'flex']} pos={'relative'} bottom={'1.4%'} left={'16%'} src={modalImage} w={['550px']} h={'510px'} objectFit={'cover'} borderRightRadius={'10px'} />
 				</ModalBody>
 			</ModalContent>
 		</Modal>
